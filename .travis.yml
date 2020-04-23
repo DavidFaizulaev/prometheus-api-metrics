@@ -23,16 +23,16 @@ jobs:
       script:
         - "npm run types-check"
     - language: node_js
-        name: types-check
-        node_js: node
-        script:
-          - "npm run lint"
+      name: lint
+      node_js: node
+      script:
+       - "npm run lint"
     - language: node_js
-        node_js:
-          - 8
-          - 10
-          - 12
-        name: types-check
-        node_js: node
-        script:
-          - "npm audit"
+      node_js:
+         - 8
+         - 10
+         - 12
+      name: vulnerabilities
+      node_js: node
+      script:
+       - "npm audit"
